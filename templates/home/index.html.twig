@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blog Symfony{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>Bien le bonjour ! ✅</h1>
+    <h3>Bienvenue sur mon blog fait avec Symfony ! Voici mon dernier article :</h3>
+
+    {% for categorie in categories %}
+        <a href="{{path ('app_categorie',{categorie:categorie.id}) }}"</h2>
+    {% endfor %}
+
+    <ul style=" display:flex; flex-direction: column; align-items:center; padding: 15px; width:max-content; margin:0 auto; margin-top: 30px; list-style:none; border: 2px white solid;">
+        <li>
+            <h4>{{ article.titre }} <br> ({{article.categorie != null ? article.categorie.titre : 'Catégorie Inconnue' }})</h4>
+            <img src="{{ article.image }}" width="140px" height="30%" alt="image de l'article">
+            <p>{{ article.texte }}</p>
+            <p>{{ article.auteur }}</p>
+            <p class="date-article">{{ article.datePublication|date('d/m/Y') }}</p>
+        </li>
+    </ul>
+</div>
+{% endblock %}

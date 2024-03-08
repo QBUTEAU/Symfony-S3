@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello RechercheController!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>Page de Recherche</h1>
+
+    <form action="{{ path('app_resultat') }}" method="post">
+        <label for="search">Recherche :</label>
+        <input type="text" id="search" name="search" required>
+        <button type="submit">Rechercher</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page d'articles{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>PAGE D'ARTICLES</h1>
+    <p>Voici la liste des articles :</p>
+
+    <ul class="tableau-articles">
+    {% for article in articles %}
+            <li>
+                <h4>{{loop.index}} - {{ article.titre }} <br> ({{article.categorie != null ? article.categorie.titre : 'Catégorie Inconnue' }})</h4>
+                <img src="{{ article.image }}" width="140px" height="30%" alt="image de l'article">
+                <p>{{ article.texte }}<br>{{ article.auteur }}</p>
+                <p class="date-article">{{ article.datePublication|date('d/m/Y') }}</p>
+            </li>
+    {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}

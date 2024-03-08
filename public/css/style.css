@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    font-family: "Outfit";
+    background-color: var(--bleuFonce);
+    color: white;
+}
+*{
+    font-family: "Outfit";
+}
+
+:root{
+    --bleuFonce : #0a0e17;
+    --rouge : rgb(123, 10, 10);
+}
+
+nav{
+    display : flex;
+    justify-content : space-around;
+    align-items : center;
+    height: 60px; 
+    background-color: var(--rouge);
+    border-bottom: 2px white solid;
+}
+nav ul{
+    display : inline-flex;
+    list-style-type: none;
+    right: 20px;
+    padding:0;
+    gap:20px
+}
+nav a{
+    text-decoration : none;
+    text-transform : uppercase;
+    font-size : 1rem;
+    font-weight: bold;
+    color : white;
+}
+
+img{
+    border : 3px white solid;
+    border-radius : 20px;
+}
+
+.example-wrapper { 
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 800px;
+    font-size: 18px/1.5;
+    text-align: center;
+}
+.example-wrapper code{ 
+    background: #F5F5F5; 
+    padding: 2px 6px; 
+}
+
+h2, h4, p{
+    margin: 0;
+}
+.date-article{
+    font-size: 10px;
+}
+.tableau-articles{
+    display: flex;
+    width: max-content;
+    height: max-content;
+    margin: 30px;
+    list-style: none;
+    padding: 0;
+    border: 1px white solid;
+}
+.tableau-articles p{
+    margin: 0;
+}
+.tableau-articles li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px white solid;
+    padding: 25px;
+    gap: 10px;
+}
+
+.formulaire-contact{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 250px;
+}
+.formulaire-contact button{
+    width: max-content;
+    font-family: "Outfit";
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 0 auto;
+}
+form{
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row;
+    gap: 60px;
+}
+form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+label{
+    font-weight: bold;
+}
+input{
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "Outfit";
+}
+textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "Outfit";
+}
+button{
+    cursor: pointer;
+    transition: 0.25s;
+}
+button:hover{
+    background-color: var(--rouge);
+    color: white;
+}

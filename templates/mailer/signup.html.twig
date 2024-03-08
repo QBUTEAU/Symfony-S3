@@ -1,0 +1,17 @@
+{# templates/emails/signup.html.twig #}
+
+<html>
+<head>
+    <title>Thanks for signing up!</title>
+</head>
+<body>
+    <h1>Thanks for signing up, Quentin !</h1>
+    
+    <p>We're excited to have you on board. Your account will be active until {{ expiration_date|date('Y-m-d H:i:s') }}.</p>
+    
+    <p>If you have any questions or need assistance, feel free to contact us at <a href="mailto:support@example.com">support@example.com</a>.</p>
+    
+    <p>Best regards,<br>
+    Your Company Name</p>
+</body>
+</html>
